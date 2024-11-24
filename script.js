@@ -4,20 +4,25 @@ function Dog(name, breed, weight) {
     this.weight = weight;
     let age = 0;
     this.setAge = function (a) {
-        if (weight<25){
-            alert(this.name + "Тяф")
-        }
-        else {
-            alert(this.name + "Гав")
-        }
+        if (a > 0) {
+            age = a;
+          } else {
+            alert("Цей собака, очевидно, ще не з'явився на світ...");
+          }
        }
     };
     this.getAge = function () {
       return age;
     };
-    this.bark = function () {
-      alert(this.name + " сказав Гав!");
-    };
+    this.setbark = function (){
+        if (weight < 25){
+            alert(this.name + "Тяф")
+        }
+        else {
+            alert(this.name + "Гав") 
+        }
+      }
+
   let fido = new Dog("Fido", "Mixed", 38, 10);
   let fluffy = new Dog("Fluffy", "Poodle", 30);
   let spot = new Dog("Spot", "Chihuahua", 10);
@@ -36,3 +41,4 @@ function Dog(name, breed, weight) {
       dogs[i].bark();
     }
   }
+ 
